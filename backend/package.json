@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "pino": "^6.13.3",
+    "pino-pretty": "^4.8.0"
+  }
 }
