@@ -8,7 +8,10 @@
     <title>Recorder</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="./app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.min.js"
+            integrity="sha512-Jq1JnVXlkYQOYQpz31qIV/0l67d97J9I6sbILtfiSYX00Isr2zK7XDRmHW8d2iBTwNZfL7sHkHGT0EzLs90jdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js"></script>
 </head>
 
 <body class="container-fluid">
@@ -18,13 +21,13 @@
                 Uploading files using BusBoy
             </h3>
 
-            <form action="POST" enctype="multipart/form-data" id="form">
+            <form action="POST" method="post" enctype="multipart/form-data" id="form">
                 <div class="form-group">
                     <label for="field">FIles</label>
                     <input type="file" class="form-control" id="file" name="file" multiple onchange="showSize()" />
                     <output class="span" id="size"></output>
                     <br />
-                    <output class="span" id="size"></output>
+                    <output class="span" id="msg"></output>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success">
