@@ -8,6 +8,7 @@ const handler = function (request, response) {
   const defaultRoute = async (request, response) => response.end("Hello");
 
     const routes = new Routes(io)
+    console.log(routes)
     
     const chosen = routes[request.method.toLowerCase()] || defaultRoute
 
